@@ -2,6 +2,11 @@ node {
   stage('SCM') {
     checkout scm
   }
+
+  stage("Clean Up") {
+
+  }
+
   stage('SonarQube Analysis') {
     def mvn = tool 'MAVEN_3.8.2';
     withSonarQubeEnv() {
