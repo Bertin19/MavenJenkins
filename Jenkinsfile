@@ -1,14 +1,24 @@
+#!groovy
+
+
 node {
+
+    def scannerHome = tool 'SonarQubeScanner'
+
   stage('SCM') {
     checkout scm
+  }
+
+  stage('Build') {
+      sh "mvn clean verify test compile"
   }
 
   withMaven(maven: 'MAVEN_3.8.2', jdk: 'JDK11', mavenLocalRepo: params.repository) {
 
       stage('SonarQube Analysis') {
 
-        withSonarQubeEnv('SonarQube') {
-          sh "mvn clean test verify sonar:sonar"
+        withSonarQubeEnv('sonarserver') {
+          sh "${scannerHome}/bin/sonar-scanner"
         }
       }
 
