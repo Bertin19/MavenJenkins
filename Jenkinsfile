@@ -7,14 +7,16 @@ node {
       stage("Clean Up") {
           echo "********** CLEAN ************"
           sh "mvn clean"
-          sh "ls -la"
       }
 
       stage('SonarQube Analysis') {
 
         withSonarQubeEnv() {
-              sh "sonar:sonar"
-            }
+          sh """mvn -X sonar:sonar \
+                             -Dsonar.projectKey=Jenkins \
+                             -Dsonar.login=dfdb726e9c6ee8d5ac6ac4d561bf5771c4499e2d
+          """
+        }
       }
   }
 
