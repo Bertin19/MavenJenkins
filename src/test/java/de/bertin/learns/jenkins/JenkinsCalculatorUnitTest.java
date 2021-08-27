@@ -16,7 +16,6 @@ public class JenkinsCalculatorUnitTest {
         JenkinsCalculator jc = new JenkinsCalculator();
         Assert.assertEquals(0, jc.sub(1,1));
         Assert.assertEquals(0, jc.sub(1,2));
-        Assert.assertEquals(0, jc.sub(1,2));
         Assert.assertEquals(3, jc.sub(6,3));
     }
 }
