@@ -7,6 +7,10 @@ node {
 
   }
 
+  stage("Test"){
+    
+  }
+
   stage('SonarQube Analysis') {
     def mvn = tool 'MAVEN_3.8.2';
     withSonarQubeEnv() {
