@@ -9,6 +9,21 @@ node {
           sh "mvn clean"
       }
 
+      stage("Maven Compile") {
+           echo "********** MAVEN COMPILE ************"
+           sh "mvn compile"
+      }
+
+      stage("Maven Test") {
+           echo "********** MAVEN TEST ************"
+           sh "mvn test"
+      }
+
+      stage("Maven Package") {
+            echo "********** MAVEN PACKAGE ************"
+            sh "mvn package"
+      }
+
       stage('SonarQube Analysis') {
 
         withSonarQubeEnv() {
