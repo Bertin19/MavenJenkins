@@ -1,8 +1,0 @@
-#surefire_0
-#Fri Aug 27 18:22:47 CEST 2021
-basedir=/Users/bertinjunior/Documents/MavenPoj
-sonar.projectKey=jenkins
-user.dir=/Users/bertinjunior/Documents/MavenPoj
-sonar.host.url=http\://localhost\:9000
-sonar.login=cc8fe784ddc4680c132957ee72d34dc4c1946015
-localRepository=/Users/bertinjunior/.m2/repository

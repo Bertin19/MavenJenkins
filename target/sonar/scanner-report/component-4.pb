@@ -1,1 +1,0 @@
- (2javaXhrEsrc/test/java/de/bertin/learns/jenkins/JenkinsCalculatorUnitTest.java
